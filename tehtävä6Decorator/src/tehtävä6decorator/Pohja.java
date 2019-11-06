@@ -18,7 +18,7 @@ public class Pohja implements Pizza{
 
     @Override
     public String tuoteKuvaus() {
-        return " Pizza pohjan";
+        return " Pizza pohja";
     }
     
     
