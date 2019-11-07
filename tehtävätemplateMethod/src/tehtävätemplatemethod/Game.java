@@ -26,10 +26,11 @@ package tehtävätemplatemethod;
     public final void playOneGame(int playersCount) {
         this.playersCount = playersCount;
         initializeGame();
-        int j = 0;
+        int j = 1;
         while (!endOfGame()){
             makePlay(j);
             j = (j + 1) % playersCount;
+           
         }
         printWinner();
     }

@@ -50,6 +50,8 @@ public class KPS extends Game{
                 tokaKäsi = "paperi";
             }
             kierrokset++;
+            System.out.println("--------------");
+            System.out.println("Uusi kierros alkaa");
         }
         
         
@@ -58,11 +60,15 @@ public class KPS extends Game{
     @Override
     boolean endOfGame() {
         //Kirjoita info lauseke joka vertailee kädet ja katsoo kumpi saa pisteen
+       
+        
         if(kierrokset == 3){
             return true;
         }else if(kierrokset == 0){
             return false;
         }
+        
+        
         
         if((ekaKäsi.equals("sakset") && tokaKäsi.equals("paperi")) || (ekaKäsi.equals("paperi") && tokaKäsi.equals("kivi")) || (ekaKäsi.equals("kivi") && tokaKäsi.equals("sakset"))){
             ekaVoitot++;
@@ -79,15 +85,17 @@ public class KPS extends Game{
 
     @Override
     void printWinner() {
+        System.out.println("-----------------");
         if(ekaVoitot > tokaVoitot){
-            System.out.println("Voittaja on ensimmäiseksi aloittanut pelaaja");
-            System.out.println("eka voitot " + ekaVoitot);
-            System.out.println("toka voitot" + tokaVoitot);
+            System.out.println("Voittaja on pelaaja 2 ");
+            System.out.println("toka voitot " + ekaVoitot);
+            System.out.println("eka voitot" + tokaVoitot);
         }else{
-            System.out.println("Voittaja on tokaksi aloittanut pelaaja");
-            System.out.println("eka voitot " + ekaVoitot);
-            System.out.println("toka voitot" + tokaVoitot);
+            System.out.println("Voittaja on pelaaja 1 ");
+            System.out.println("toka voitot " + ekaVoitot);
+            System.out.println("eka voitot " + tokaVoitot);
         }
+        System.out.println("-----------------");
     }
     
 }
