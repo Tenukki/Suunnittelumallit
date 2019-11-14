@@ -10,5 +10,24 @@ package chainofresponsibility10;
  * @author Santeri
  */
 public class Palkka {
+    private double Tpalkka;
+
+    public Palkka(double Tpalkka) {
+        this.Tpalkka = Tpalkka;
+    }
+
+    public double getTpalkka() {
+        return Tpalkka;
+    }
+
+    public void setTpalkka(double Tpalkka) {
+        this.Tpalkka = Tpalkka;
+    }
+
+    @Override
+    public String toString() {
+        return "Palkka : "+Tpalkka;
+    }
+    
     
 }

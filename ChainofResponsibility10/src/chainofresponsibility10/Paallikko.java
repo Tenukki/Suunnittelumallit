@@ -5,22 +5,24 @@
  */
 package chainofresponsibility10;
 
+import static chainofresponsibility10.JohtajaPower.BASE;
+
 /**
  *
  * @author Santeri
  */
-public class Lahiesimies extends JohtajaPower{
+public class Paallikko extends JohtajaPower{
     private final double ALLOWABLE = 1.02 * BASE;
+    private final double ALLOWABLE2 = 1.05 * BASE;
     
     @Override
     public void processRequest(Palkka request) {
-        if (request.getTpalkka() <= ALLOWABLE) {
+        if (request.getTpalkka() > ALLOWABLE && request.getTpalkka() < ALLOWABLE2 ) {
         System.out.println(
-        "Lähiesimies will approve $" + request.getTpalkka());
+        "Päällikko will approve $" + request.getTpalkka());
         } else if (successor != null) {
             successor.processRequest(request);
         }
 
     }
-    
 }
