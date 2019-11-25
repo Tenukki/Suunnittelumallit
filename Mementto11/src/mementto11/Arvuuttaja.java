@@ -32,7 +32,7 @@ public class Arvuuttaja {
    
    public Memento liityPeliin(Pelaaja p){
        Random rand = new Random();
-       int luku = rand.nextInt(1);
+       int luku = rand.nextInt(20);
        Originator a = new Originator();
        a.setState(luku);
        return a.saveStateToMemento();
